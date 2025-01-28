@@ -7,7 +7,7 @@ require("dotenv").config();
 const cors = require("cors");
 const cors = require("cors");
 let corsOptions = {
-  origin: ["https://wasan-rooms.vercel.app/"],
+  origin: ["https://wasanrooms.netlify.app/"],
 };
 app.use(cors(corsOptions));
 
