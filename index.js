@@ -9,7 +9,7 @@ const cors = require("cors");
 let corsOptions = {
   origin: ["https://wasanrooms.netlify.app/"],
 };
-app.use(cors(corsOptions));
+app.use(cors());
 
 app.get("/", (req, res) => {
   res.send("Hello from Wasan World");
