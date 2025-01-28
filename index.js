@@ -5,7 +5,7 @@ app.use(express.json());
 const dbConfig = require("./db");
 require("dotenv").config();
 const cors = require("cors");
-const cors = require("cors");
+
 let corsOptions = {
   origin: ["https://wasanrooms.netlify.app/"],
 };
