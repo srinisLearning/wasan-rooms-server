@@ -5,7 +5,11 @@ app.use(express.json());
 const dbConfig = require("./db");
 require("dotenv").config();
 const cors = require("cors");
-app.use(cors());
+const cors = require("cors");
+let corsOptions = {
+  origin: ["https://wasan-rooms.vercel.app/"],
+};
+app.use(cors(corsOptions));
 
 app.get("/", (req, res) => {
   res.send("Hello from Wasan World");
