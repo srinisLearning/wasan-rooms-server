@@ -5,10 +5,6 @@ app.use(express.json());
 const dbConfig = require("./db");
 require("dotenv").config();
 const cors = require("cors");
-
-let corsOptions = {
-  origin: ["https://wasanrooms.netlify.app/"],
-};
 app.use(cors());
 
 app.get("/", (req, res) => {
@@ -26,5 +22,3 @@ app.use("/api/bookings", bookingRoutes);
 app.listen(PORT, () => {
   console.log(`Server is listening on port ${PORT}`);
 });
-
-module.exports = app;

@@ -6,6 +6,15 @@ const mongoose = require("mongoose");
 router.post("/register", async (req, res) => {
   const { name, email, mobile, password } = req.body;
 
+  const userExists = await User.findOne({ email });
+  try {
+    if (userExists) {
+      return res.status(400).json({ message: "User already exists" });
+    }
+  } catch (error) {
+    console.log(error);
+  }
+
   const newUser = new User({ name, email, mobile, password });
   //console.log(newUser);
 
@@ -33,7 +42,7 @@ router.post("/login", async (req, res) => {
       };
       return res.send(loggedInUser);
     } else {
-      console.log("Invalid Credentials");
+      //  console.log("Invalid Credentials");
       return res.status(400).json({ message: "Invalid Credentials" });
     }
   } catch (error) {
