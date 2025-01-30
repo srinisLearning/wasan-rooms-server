@@ -8,6 +8,7 @@ bookingSchema = mongoose.Schema(
     userName: { type: String, required: true },
     fromdate: { type: String, required: true },
     todate: { type: String, required: true },
+    additionalOccupancy: { type: Number, required: true },
     totalDays: { type: Number, required: true },
     totalAmount: { type: Number, required: true },
     transactionId: { type: String, required: true },
