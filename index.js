@@ -8,7 +8,7 @@ const cors = require("cors");
 app.use(cors());
 
 app.get("/", (req, res) => {
-  res.send("Hello from Wasan World");
+  res.send("Wasan Rooms Server Running....");
 });
 const roomsRoutes = require("./routes/roomRoutes");
 const userRoutes = require("./routes/userRoutes");
